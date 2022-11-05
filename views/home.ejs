@@ -1,0 +1,37 @@
+<%- include ("layout/header.ejs") %>
+<%- include ("layout/nav.ejs") %>
+
+<h1>page ejs</h1>
+<p>paragraphe 1</p>
+<strong>le premier element : </strong>
+
+<% let a = 2;   %>
+<%= a %>
+
+<% for(let i = 0;i<products.length;i++){%>
+    <p>
+        <strong>
+            <%= products[i].article_id%>
+        </strong>
+    </p>
+    <%}%>
+
+
+
+
+
+<%= products[0].product_id %> <!--lecture de données-->
+<%= products[0].product_name %>
+
+<h2>Traitement de la liste des produit</h2>
+<select name="" id="">
+    <% for (let i = 0; i<products.length; i++) {%>
+        <option value="<%= products[i].product_id%>">
+            <%= products[i].product_name%>
+        </option>
+    <%}%>
+</select>
+
+
+
+<%- include ("layout/footer.ejs") %>

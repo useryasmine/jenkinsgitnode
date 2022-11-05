@@ -1,0 +1,165 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+header{
+    background: #96bbdc;
+    float: left;
+    width: 100%;
+    height: 18%;
+}
+
+.logo{
+    background: #0b2e13;
+    float: left;
+    height: 80%;
+    margin: 1%;
+
+}
+
+.header_title{
+    background: #0e84b5;
+    float: left;
+    width : 80%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.global{
+    background: #c2d1f5;
+    float: left;
+    width: 100%;
+}
+
+nav{
+    /*background: grey;*/
+    float: left;
+    width: 20%;
+    /*height: 72%;*/
+    margin-right: 2%;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li{
+    /*background: #1e8cfd;*/
+    margin: 2%;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+nav ul li a{
+    background: #295098;
+    display: block;
+    text-decoration: none;
+    padding: 5%;
+    color : white;
+}
+
+nav ul li a:hover{
+    background: #c2d1f5;
+}
+
+
+.content{
+    background: #ffffff;
+    float: left;
+    width: 78%; /*78%-2%-2%*/
+    height: auto;
+    /*height: 72%; !*72%-2%-2%*!*/
+    /*padding: 2%;*/
+}
+.article {
+    /*background: #0a53be;*/
+    float: left;
+    width : 96%;
+    border: grey solid 2px;
+    border-radius: 15px;
+    margin: 2%;
+
+}
+
+.article h2{
+    /*background: red;*/
+    float: left;
+    width: 98%;
+    padding-left: 2% ;
+}
+
+.article img{
+    background: grey;
+    float: left;
+    width : 20%;
+    margin-left: 2%;
+}
+
+.article p {
+    float: left;
+    /*background: green;*/
+    width: 73%;
+
+    overflow: hidden;
+    transition: height 2s;
+
+    height: 100px;
+    margin-top: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid grey 1px;
+}
+
+.article button{
+    float: right;
+    margin-bottom: 1%;
+    margin-right: 2%;
+}
+
+footer{
+    background: #96bbdc;
+    float: left;
+    width: 100%;
+    height: 10%;
+}
+
+
+.contact_form{
+    float: left;
+    width: 90%;
+    margin: 3%;
+    background: #0a53be;
+}
+
+.contact_map{
+    float: left;
+    width: 90%;
+    margin: 3%;
+    background: #c2d1f5;
+}
+
+
+
+
+
+@media screen and (max-width: 400px) {
+
+    nav {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+
+}

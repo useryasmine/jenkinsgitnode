@@ -1,0 +1,281 @@
+// alert('test file');
+
+
+let a = 1;
+let b = 2;
+let s;
+
+s=a+b;
+m = s/2;
+
+
+console.log('la valeur de s'+s);
+console.log('la valeur de s',s);
+
+let r = typeof(a);
+console.log('le type de a 1 : ',r) // affiche number
+
+a = 'nouveau  test';
+r = typeof(a);
+console.log('le type de a 2 : ',r) // affiche string
+
+let tab1 = []; // declaration de tableau vide
+
+let tab2 = [1,2,6,8] // declaration de tableau remplis
+
+console.log('tab1',tab1)
+console.log('tab2',tab2)
+
+console.log(tab2[2])
+tab2[2] = 22
+console.log('tab2 change',tab2)
+
+
+let strNoms = 'nom1-nom2-nom3';
+
+let tabNoms = strNoms.split('-')
+
+console.log('string to array',tabNoms)
+
+let strNom2 = tabNoms.join('/');
+console.log('array to str',strNom2)
+
+/*let nom = prompt('saisir un nom');
+let prenom = prompt('saisir un prenom');
+let age = prompt('saisir un age');*/
+/*
+
+let chainecomplet = nom +' '+ prenom+ ' ' + age;
+console.log('la chaine : ',chainecomplet)
+
+// let tabnomcomplet = [nom,prenom,age]
+/!*
+let tabnomcomplet = []
+tabnomcomplet.push(nom,prenom,age)*!/
+
+let tabnomcomplet = chainecomplet.split(' ')
+console.log(tabnomcomplet)
+*/
+
+/*
+let age = prompt('saisir votre age');
+if(age > 0 && age < 100){
+    if (age >= 1 && age <=6){
+        alert('enfant')
+    }
+    else if (age >= 7 && age <=11){
+        alert('jeune')
+    }
+    else if (age >= 12) {
+        alert('adulte')
+    }
+
+}
+else {
+    alert('données erroné')
+}
+*/
+/*
+
+a = 0;
+console.log('a depart',a)
+
+
+while (a<10)
+{
+    console.log(a)
+    a++;
+}
+console.log('a final',a)
+
+a = 11;
+console.log('a depart',a)
+do {
+    console.log(a)
+    a++;
+}while (a<10)
+console.log('a final',a)
+*/
+
+/*
+let age;
+
+do{
+    age = prompt('saisir votre age correct');
+}while (age < 0 || age > 100 || isNaN(age))
+
+    if (age >= 1 && age <=6){
+        alert('enfant')
+    }
+    else if (age >= 7 && age <=11){
+        alert('jeune')
+    }
+    else if (age >= 12) {
+        alert('adulte')
+    }
+
+    for(let i=0; i<5;i++){
+        console.log(i)
+    }
+
+*/
+
+
+
+
+/*
+let etudiant = {};
+
+etudiant.nom = prompt('saisir nom');
+etudiant.prenom = prompt('saisir prenom');
+etudiant.age = prompt('saisir age');
+
+console.log(etudiant)
+*/
+
+
+
+// traitement manuel
+note1 = 15;
+note2 = 8;
+note3 = 18;
+
+s = note1 + note2 + note3;
+
+m = s/3;
+
+if (note1 >10 && note2 > 10 && m > 10 )
+{
+    admis = 1
+}
+else admis = 0
+
+
+
+
+/*//declaration de fonction
+function somme(v1,v2){
+
+    let s;
+    s= v1+v2;
+
+    return s;
+
+}
+
+//execution fonction
+let s1 = somme(5,6);
+
+
+// declarer la fonction note
+function admitCheck(note1,note2,note3){
+
+    s = note1 + note2 + note3;
+    m = s/3;
+
+    if (note1 >10 && note2 > 10 && m > 10 )
+    {
+        admis = true
+    }
+    else admis = false
+
+    return admis
+}
+
+
+//execution 1
+if (admitCheck(12,8,17)) {
+    alert("admis")
+}
+else alert("ajourne")
+
+
+let etudiant = {
+
+    nom : 'mouloudj',
+    prenom : 'imad',
+    age : 23,
+    showname : function (){
+        alert('bonjour '+this.nom+' '+this.prenom)
+    },
+    checkAd : function (){
+        let note1 = this.note1,
+            note2= this.note2,
+            note3= this.note3;
+        s = note1 + note2 + note3;
+        m = s/3;
+        if (note1 >10 && note2 > 10 && m > 10 ) admis = true
+        else admis = false
+
+        return admis
+    }
+}
+
+etudiant.note1 = 12;
+etudiant.note2 = 15;
+etudiant.note3 = 18;
+
+console.log(etudiant)
+console.log(etudiant.checkAd())
+
+etudiant.showname()
+
+admitCheck()*/
+
+// acceder a l'element
+let titre2 = document.getElementById('titre1')
+let articles = document.getElementsByClassName('article')
+
+// console.log(titre2)
+// console.log(articles)
+
+console.log(articles)
+
+
+// modification sur l'element
+//articles[0].innerText = 'nouveau texte'
+
+
+
+
+
+setTimeout(function (){
+    titre2.innerHTML = "<br>nouveau titre";
+
+    setTimeout(function (){
+        titre2.style.color = "red";
+        titre2.style.backgroundColor = "grey";
+    },2000)
+
+},5000)
+
+
+for(let i=0 ; i<articles.length; i++){
+    console.log('article ',i,articles[i]);
+    if(i%2 == 0) articles[i].style.background = 'aqua'
+    else articles[i].style.background = 'red';
+}
+
+
+// etape 1 selection
+let art_detail = document.querySelector('#art_detail');
+let btn_detail = document.querySelector('#btn_detail');
+
+// etape 2 fonction de modification
+function detail_open(){
+
+    if (art_detail.style.height == "100px") art_detail.style.height = "300px"
+    else art_detail.style.height = "100px"
+}
+
+// etape 3 ajout de l'evenement
+btn_detail.addEventListener('click',function (){
+    detail_open()
+})
+
+
+
+
+
+
+
